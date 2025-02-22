@@ -1,0 +1,23 @@
+{
+    "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR red]hd4me[/COLOR]",
+    "plugin"            : "plugin.video.s4me",
+    "priority"          : 100,
+	"is_resolvable"     : "false",
+    "assert": {
+        "play_movie"    : ["title","year"],
+        "search_movie"  : ["!title"]
+	},
+    "play_movie": [
+        "plugin://plugin.video.s4me/?action=search&channel=hd4me",
+        {"keyboard": "{title}"},
+        {"dialog": "true", "title": "(?i)^.*{title}.*$", "year": "{year}"}
+    ],
+    "search_movie": [
+        "plugin://plugin.video.s4me/?action=search&channel=hd4me",
+        {"keyboard": "{title}"},
+		{"dialog": "true"}
+    ],
+    "fallback": {
+        "play_movie": "S4Me_ricerca.json play_movie"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "name"          : "[COLOR blue]s4me[/COLOR]___[COLOR red]ricerca[/COLOR]",
+    "plugin"        : "plugin.video.s4me",
+    "priority"      : 95,
+    "is_resolvable" : "false",
+    "play_movie"    : "plugin://plugin.video.s4me/?ewogICAgImFjdGlvbiI6ICJTZWFyY2giLAogICAgImNoYW5uZWwiOiAiZ2xvYmFsc2VhcmNoIiwgICAgCiAgICAiZm9sZGVyIjogZmFsc2UsCiAgICAibW9kZSI6ICJtb3ZpZSIsCiAgICAidHlwZSI6ICJtb3ZpZSIKfQ==&text={clearname}",
+    "play_episode"  : "plugin://plugin.video.s4me/?ewogICAgImFjdGlvbiI6ICJTZWFyY2giLAogICAgImNoYW5uZWwiOiAiZ2xvYmFsc2VhcmNoIiwKICAgICJmb2xkZXIiOiBmYWxzZSwKICAgICJtb2RlIjogInR2c2hvdyIsCiAgICAidHlwZSI6ICJ0dnNob3ciCn0=&text={clearname}"
+}

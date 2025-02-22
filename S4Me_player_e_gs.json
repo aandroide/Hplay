@@ -1,0 +1,25 @@
+{
+    "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR deepskyblue]GuardaSerie[/COLOR]",
+    "plugin"            : "plugin.video.s4me",
+    "priority"          : 100,
+	"is_resolvable"     : "false",
+    "make_playlist"     : "upnext",
+    "assert": {
+        "play_episode"  : ["showname","season","episode"],
+        "search_episode": ["!showname"]
+	},
+    "play_episode": [
+        "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
+        {"keyboard": "{showname}"},
+        {"title": "(?i)^{showname}", "year": "({showyear}|{year})"},
+        {"season": "^{season}$", "episode": "^{episode}$"}
+    ],
+    "search_episode": [
+        "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
+        {"keyboard": "{showname}"},
+		{"dialog": "true"}
+    ],
+	"fallback": {
+        "play_episode": "S4Me_ricerca.json play_episode"
+    }
+}

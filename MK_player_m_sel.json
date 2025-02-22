@@ -1,0 +1,28 @@
+{
+    "name"              : "[COLOR aqua]MK[/COLOR]_[COLOR red]Film(sel-server)[/COLOR]",
+    "plugin"            : "plugin.video.mandrakodi",
+    "priority"          : 100,
+	"is_resolvable"     : "true",
+    "assert": {
+        "play_movie"    : ["title","year"],
+        "play_episode"  : ["showname","season","episode"],
+        "search_movie"  : ["title"],
+        "search_episode": ["showname"]
+	},
+    "play_movie": [
+        "plugin://plugin.video.mandrakodi/?action=myresolve&url=imdb&parIn={imdb}",
+		{"dialog": "auto", "strict": "true", "label": "{title}", "title": "(?i)^.*(supervideo|dropload|mixdrop|streamtape|doodstream).*$"},
+		{"return": "true", "title": "(?i)^.*LINK [0-9].*$"},
+		{"dialog": "true", "strict": "true", "label": "{title}"}
+    ],
+    "search_movie": [
+        "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26search%3D",
+        {"keyboard": "{title}"},
+		{"dialog": "true"},
+		{"dialog": "true"},
+		{"dialog": "true"}
+    ],
+	    "fallback": {
+        "play_movie": "MK_player_m_sel.json search_movie"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR orange]FilmPerTutti[/COLOR]",
+    "plugin"            : "plugin.video.s4me",
+    "priority"          : 100,
+	"is_resolvable"     : "false",
+	"make_playlist"     : "upnext",
+    "assert": {
+        "play_movie"    : ["!title","year"],
+        "play_episode"  : ["showname","season","episode"],
+        "search_movie"  : ["!title"],
+        "search_episode": ["!showname"]
+	},
+    "play_movie": [
+        "plugin://plugin.video.s4me/?action=search&channel=filmpertutti",
+        {"keyboard": "{title}"},
+        {"title": "(?i)^.*{title}$", "year": "{year}"}
+    ],
+    "play_episode": [
+        "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiZmlsbXBlcnR1dHRpIiwiaW5mb0xhYmVscyI6eyJtZWRpYXR5cGUiOiJ0dnNob3cifX0=",
+        {"keyboard": "{showname}"},
+        {"title": "(?i)^{showname}$", "year": "({showyear}|{year})"},
+        {"season": "^{season}$", "episode": "^{episode}$"}
+    ],
+    "search_movie": [
+        "plugin://plugin.video.s4me/?action=search&channel=filmpertutti",
+        {"keyboard": "{title}"}
+    ],
+    "search_episode": [
+        "plugin://plugin.video.s4me/?action=search&channel=filmpertutti",
+        {"keyboard": "{showname}"},
+		{"dialog": "true"}
+    ],
+	"fallback": {
+        "play_movie": "S4Me_ricerca.json play_movie",
+        "play_episode": "S4Me_ricerca.json play_episode"
+    }
+}

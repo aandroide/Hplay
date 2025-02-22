@@ -1,0 +1,7 @@
+{
+    "name"          : "[COLOR blue]s4me[/COLOR]___[COLOR red]ricerca_vecchia[/COLOR]",
+    "plugin"        : "plugin.video.s4me",
+    "priority"      : 99,
+    "search_movie"  : "plugin://plugin.video.s4me/?ewogICAgImNoYW5uZWwiOiAic2VhcmNoIiwKICAgICJhY3Rpb24iOiAibmV3X3NlYXJjaCIsCiAgICAibW9kZSI6ICJhbGwiCn0=&search_text={clearname_+}",
+    "search_episode": "plugin://plugin.video.s4me/?ewogICAgImNoYW5uZWwiOiAic2VhcmNoIiwKICAgICJhY3Rpb24iOiAibmV3X3NlYXJjaCIsCiAgICAibW9kZSI6ICJhbGwiCn0=&search_text={clearname_+}"
+}
