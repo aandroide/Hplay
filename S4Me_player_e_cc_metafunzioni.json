@@ -18,8 +18,8 @@
     "play_episode": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiY2FzYWNpbmVtYSIsImluZm9MYWJlbHMiOnsibWVkaWF0eXBlIjoidHZzaG93In19",
         {"keyboard": "{showname}"},
-        {"title": "(?i)^{showname}$", "year": "({showyear}|{year})"},
-        {"season": "^{season}$", "episode": "^{episode}$"}
+        {"title": "(?i)^{showname}$", "year": "{showyear}"},
+        {"season": "{season}", "episode": "{episode}"}
     ],
     "search_movie": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiY2FzYWNpbmVtYSIsImluZm9MYWJlbHMiOnsibWVkaWF0eXBlIjoidW5kZWZpbmVkIn19",

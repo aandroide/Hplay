@@ -18,8 +18,8 @@
     "play_episode": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiZmlsbXBlcnR1dHRpIiwiaW5mb0xhYmVscyI6eyJtZWRpYXR5cGUiOiJ0dnNob3cifX0=",
         {"keyboard": "{showname}"},
-        {"title": "(?i)^{showname}$", "year": "({showyear}|{year})"},
-        {"season": "^{season}$", "episode": "^{episode}$"}
+        {"title": "(?i)^{showname}$", "year": "{showyear}"},
+        {"season": "{season}", "episode": "{episode}"}
     ],
     "search_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=filmpertutti",

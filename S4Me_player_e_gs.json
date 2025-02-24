@@ -11,8 +11,8 @@
     "play_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
         {"keyboard": "{showname}"},
-        {"title": "(?i)^{showname}", "year": "({showyear}|{year})"},
-        {"season": "^{season}$", "episode": "^{episode}$"}
+        {"title": "(?i)^{showname}$", "year": "{showyear}"},
+        {"season": "{season}", "episode": "{episode}"}
     ],
     "search_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
