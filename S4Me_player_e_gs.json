@@ -2,7 +2,7 @@
     "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR deepskyblue]GuardaSerie[/COLOR]",
     "plugin"            : "plugin.video.s4me",
     "priority"          : 100,
-	"is_resolvable"     : "false",
+    "is_resolvable"     : "false",
     "make_playlist"     : "upnext",
     "assert": {
         "play_episode"  : ["showname","season","episode"],
