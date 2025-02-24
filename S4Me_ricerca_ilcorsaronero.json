@@ -6,11 +6,11 @@
     "search_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=ilcorsaronero",
         {"keyboard": "{title}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
     "search_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=ilcorsaronero",
         {"keyboard": "{showname}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ]
 }

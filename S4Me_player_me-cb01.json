@@ -24,12 +24,12 @@
     "search_movie": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiY2luZWJsb2cwMSIsImluZm9MYWJlbHMiOnsibWVkaWF0eXBlIjoibW92aWUifX0K",
         {"keyboard": "{title}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
     "search_episode": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiY2luZWJsb2cwMSIsImluZm9MYWJlbHMiOnsibWVkaWF0eXBlIjoidHZzaG93In19Cg==",
         {"keyboard": "{showname}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
 	"fallback": {
         "play_movie": "S4Me_ricerca.json play_movie",

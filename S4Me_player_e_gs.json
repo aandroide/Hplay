@@ -17,7 +17,7 @@
     "search_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
         {"keyboard": "{showname}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
 	"fallback": {
         "play_episode": "S4Me_ricerca.json play_episode"

@@ -28,7 +28,7 @@
     "search_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=filmpertutti",
         {"keyboard": "{showname}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
 	"fallback": {
         "play_movie": "S4Me_ricerca.json play_movie",

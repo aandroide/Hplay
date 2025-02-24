@@ -24,12 +24,12 @@
     "search_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=tantifilm",
         {"keyboard": "{title}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
     "search_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=tantifilm",
         {"keyboard": "{showname}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
     "fallback": {
         "play_movie": "S4Me_ricerca.json play_movie",
