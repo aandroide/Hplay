@@ -11,7 +11,7 @@
     "play_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=filmpertutti",
         {"keyboard": "{title}"},
-        {"title": "(?i)^.*{title}$", "year": "{year}"}
+        {"title": "(?i)^.*{title}.*$", "year": "{year}"}
     ],
     "play_episode": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiZmlsbXBlcnR1dHRpIiwiaW5mb0xhYmVscyI6eyJtZWRpYXR5cGUiOiJ0dnNob3cifX0=",
