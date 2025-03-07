@@ -5,19 +5,13 @@
     "is_resolvable"     : "false",
     "make_playlist"     : "upnext",
     "assert": {
-        "play_episode"  : ["showname","season","episode"],
-        "search_episode": ["!showname"]
+        "play_episode"  : ["showname","season","episode"]
 	},
     "play_episode": [
         "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
         {"keyboard": "{showname}"},
         {"title": "(?i)^{showname}$", "year": "{showyear}"},
         {"season": "{season}", "episode": "{episode}"}
-    ],
-    "search_episode": [
-        "plugin://plugin.video.s4me/?action=search&channel=guardaseriecam",
-        {"keyboard": "{showname}"},
-        {"dialog": "true"}
     ],
 	"fallback": {
         "play_episode": "S4Me_ricerca.json play_episode"

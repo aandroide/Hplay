@@ -14,11 +14,6 @@
         {"title": "(?i)^{showname}$", "year": "{showyear}"},
         {"season": "{season}", "episode": "{episode}"}
     ],
-    "search_episode": [
-        "plugin://plugin.video.s4me/?action=search&channel=eurostreaming_actor",
-        {"keyboard": "{showname}"},
-        {"dialog": "true"}
-    ],
 	"fallback": {
         "play_episode": "S4Me_ricerca.json play_episode"
     }

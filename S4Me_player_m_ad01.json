@@ -4,18 +4,12 @@
     "priority"          : 100,
     "is_resolvable"     : "false",
     "assert": {
-        "play_movie"    : ["title","year"],
-        "search_movie"  : ["!title"]
+        "play_movie"    : ["title","year"]
 	},
     "play_movie": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiYWx0YWRlZmluaXppb25lMDEiLCJpbmZvTGFiZWxzIjp7Im1lZGlhdHlwZSI6InVuZGVmaW5lZCJ9fQ==",
         {"keyboard": "{title}"},
         {"title": "(?i)^.*{title}.*$", "year": "{year}"}
-    ],
-    "search_movie": [
-        "plugin://plugin.video.s4me/?action=search&channel=altadefinizione01",
-        {"keyboard": "{title}"},
-        {"dialog": "true"}
     ],
     "fallback": {
         "play_movie": "S4Me_ricerca.json play_movie"

@@ -6,9 +6,7 @@
     "make_playlist"     : "upnext",
     "assert": {
         "play_movie"    : ["title","year"],
-        "play_episode"  : ["showname","season","episode"],
-        "search_movie"  : ["!title"],
-        "search_episode": ["!showname"]
+        "play_episode"  : ["showname","season","episode"]
     },
     "play_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=streamingcommunity",
@@ -20,16 +18,6 @@
         {"keyboard": "{showname}"},
         {"title": "(?i)^{showname}$", "year": "{showyear}"},
         {"season": "{season}", "episode": "{episode}"}
-    ],
-    "search_movie": [
-        "plugin://plugin.video.s4me/?action=search&channel=streamingcommunity",
-        {"keyboard": "{title}"},
-        {"dialog": "true"}
-    ],
-    "search_episode": [
-        "plugin://plugin.video.s4me/?action=search&channel=streamingcommunity",
-        {"keyboard": "{showname}"},
-        {"dialog": "true"}
     ],
     "fallback": {
         "play_movie": "S4Me_ricerca.json play_movie",

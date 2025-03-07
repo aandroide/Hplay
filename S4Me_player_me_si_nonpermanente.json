@@ -6,9 +6,7 @@
     "make_playlist"     : "upnext",
     "assert": {
         "play_movie"    : ["title","year"],
-        "play_episode"  : ["showname","season","episode"],
-        "search_movie"  : ["!title"],
-        "search_episode": ["!showname"]
+        "play_episode"  : ["showname","season","episode"]
 	},
     "play_movie": [
         "plugin://plugin.video.s4me/?ewogICAgImFjdGlvbiI6ICJzZWFyY2giLAogICAgImNoYW5uZWwiOiAic3RyZWFtaW5naXRhIiwKICAgICJleHRyYSI6ICJtb3ZpZSIsCiAgICAiZ2xvYmFsc2VhcmNoIjogZmFsc2UsCiAgICAiaW5mb0xhYmVscyI6IHsibWVkaWF0eXBlIjoibW92aWUifSwKICAgICJ1cmwiOiAiaHR0cHM6Ly9zdHJlYW1pbmdpdGEuY2xpY2siCn0=",
@@ -20,16 +18,6 @@
         {"keyboard": "{showname}"},
         {"title": "(?i)^{showname}$", "year": "{showyear}"},
         {"season": "{season}", "episode": "{episode}"}
-    ],
-    "search_movie": [
-        "plugin://plugin.video.s4me/?ewogICAgImFjdGlvbiI6ICJzZWFyY2giLAogICAgImNoYW5uZWwiOiAic3RyZWFtaW5naXRhIiwKICAgICJleHRyYSI6ICJtb3ZpZSIsCiAgICAiZ2xvYmFsc2VhcmNoIjogZmFsc2UsCiAgICAiaW5mb0xhYmVscyI6IHsibWVkaWF0eXBlIjoibW92aWUifSwKICAgICJ1cmwiOiAiaHR0cHM6Ly9zdHJlYW1pbmdpdGEuY2xpY2siCn0=",
-        {"keyboard": "{title}"},
-        {"dialog": "true"}
-    ],
-    "search_episode": [
-        "plugin://plugin.video.s4me/?ewogICAgImFjdGlvbiI6ICJzZWFyY2giLAogICAgImNoYW5uZWwiOiAic3RyZWFtaW5naXRhIiwKICAgICJleHRyYSI6ICJ0dnNob3ciLAogICAgImdsb2JhbHNlYXJjaCI6IGZhbHNlLAogICAgImluZm9MYWJlbHMiOiB7Im1lZGlhdHlwZSI6InR2c2hvdyJ9LAogICAgInVybCI6ICJodHRwczovL3N0cmVhbWluZ2l0YS5jbGljayIKfQ==",
-        {"keyboard": "{showname}"},
-        {"dialog": "true"}
     ],
     "fallback": {
         "play_movie": "S4Me_ricerca.json play_movie",
