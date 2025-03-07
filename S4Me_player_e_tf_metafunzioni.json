@@ -5,7 +5,7 @@
     "is_resolvable"     : "false",
     "make_playlist"     : "upnext",
     "assert": {
-        "play_movie"    : ["title","year"],
+        "play_movie"    : ["!title","year"],
         "play_episode"  : ["showname","season","episode"]
 	},
     "play_movie": [
