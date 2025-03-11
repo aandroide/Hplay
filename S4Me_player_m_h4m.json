@@ -1,11 +1,8 @@
 {
-    "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR red]hd4me[/COLOR]",
+    "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR red]HD4me[/COLOR]",
     "plugin"            : "plugin.video.s4me",
     "priority"          : 100,
     "is_resolvable"     : "false",
-    "assert": {
-        "play_movie"    : ["title","year"]
-	},
     "play_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=hd4me",
         {"keyboard": "{title}"},

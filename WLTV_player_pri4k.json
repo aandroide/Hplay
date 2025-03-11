@@ -12,7 +12,7 @@
     "play_movie": [
         "plugin://plugin.video.wltvhelper/vodmanager/showsearch/None/MOVIES",
         {"keyboard": "{title}"},
-        {"return": "true", "title": "(?i)^.*{title}.*{year}.*[4K].*$"},
+        {"return": "true", "title": "(?i)^.*{title}.*(\\({year}\\)).*(\\[4K\\]).*$"},
         {"return": "false", "title": "(?i)^.*{title}.*{year}.*$"}
     ],
     "play_episode": [

@@ -4,10 +4,6 @@
     "priority"          : 100,
     "is_resolvable"     : "false",
     "make_playlist"     : "upnext",
-    "assert": {
-        "play_movie"    : ["title","year"],
-        "play_episode"  : ["showname","season","episode"]
-    },
     "play_movie": [
         "plugin://plugin.video.s4me/?action=search&channel=streamingcommunity",
         {"keyboard": "{title}"},

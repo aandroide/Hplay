@@ -4,10 +4,6 @@
     "priority"          : 100,
     "is_resolvable"     : "false",
     "make_playlist"     : "upnext",
-    "assert": {
-        "play_movie"    : ["title","year"],
-        "play_episode"  : ["showname","season","episode"]
-	},
     "play_movie": [
         "plugin://plugin.video.s4me/?eyJhY3Rpb24iOiJzZWFyY2giLCJjaGFubmVsIjoiY2luZWJsb2cwMSIsImluZm9MYWJlbHMiOnsibWVkaWF0eXBlIjoibW92aWUifX0K",
         {"keyboard": "{title}"},
