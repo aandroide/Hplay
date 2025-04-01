@@ -6,7 +6,7 @@
     "play_movie": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26search%3D",
         {"keyboard": "{title}"},
-		{"title": "(?i)^\\[COLOR aqua\\]SL (3|2) ...\\[/COLOR\\] \\[COLOR lime\\]\\b{title}.*?(\\({year}\\))?\\[/COLOR\\]$"},
+		{"title": "(?i)^\\[COLOR aqua\\]SL (3|2) ...(\\[.*\\])*\\b{title}.*?(\\({year}\\))?\\[/COLOR\\]$"},
         {"return": "true", "title": "(?i)^.*{title}.*$"},
 		{"title": "(?i)^.*(mixdrop|supervideo|dropload|streamtape|doodstream).*$"},
 		{"return": "true", "title": "(?i)^.*LINK [0-9].*$"},
@@ -15,25 +15,13 @@
     "play_episode": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26mode%3D1%26search%3D",
         {"keyboard": "{showname}"},
-        {"title": "(?i)^\\[COLOR aqua\\]SL 3 ...\\[/COLOR\\] \\[COLOR lime\\]\\b({showname}|{originaltitle}).*?(\\({year}\\))?\\[/COLOR\\]$"},
+        {"title": "(?i)^\\[COLOR aqua\\]SL 3 ...(\\[.*\\])*\\b({showname}|{originaltitle}).*?(\\({year}\\))?\\[/COLOR\\]$"},
         {"title": "(?i)^.*{season}x{episode}.*$"},
         {"return": "true","title": "(?i)^.*PLAY.*$"},
         {"dialog": "true", "strict": "true", "label": "{title}"}
     ],
-    "search_movie": [
-        "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26search%3D",
-        {"keyboard": "{title}"},
-		{"dialog": "true"},
-		{"dialog": "true"}
-    ],
-    "search_episode": [
-        "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26mode%3D1%26search%3D",
-        {"keyboard": "{showname}"},
-        {"dialog": "true"},
-        {"dialog": "true"}
-    ],
 	    "fallback": {
-        "play_movie": "MK_player_me_SL3.json search_movie",
-        "play_episode": "MK_player_me_SL3.json search_episode"
+        "play_movie": "MK_player_me_SL123.json search_movie",
+        "play_episode": "MK_player_me_SL123.json search_episode"
     }
 }
