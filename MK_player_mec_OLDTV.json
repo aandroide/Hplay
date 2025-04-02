@@ -29,7 +29,7 @@
         {"keyboard": "{showname}"},
         {"dialog": "true"}
     ],
-        "fallback": {
+    "fallback": {
         "play_movie": "MK_player_mec_OLDTV.json search_movie",
         "play_episode": "MK_player_mec_OLDTV.json search_episode"
     }

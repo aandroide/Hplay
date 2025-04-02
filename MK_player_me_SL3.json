@@ -20,7 +20,7 @@
         {"return": "true","title": "(?i)^.*PLAY.*$"},
         {"dialog": "true", "strict": "true", "label": "{title}"}
     ],
-        "fallback": {
+     "fallback": {
         "play_movie": "MK_player_me_SL123.json search_movie",
         "play_episode": "MK_player_me_SL123.json search_episode"
     }
