@@ -2,7 +2,7 @@
     "name"              : "[COLOR aqua]WLTV[/COLOR]_[COLOR red]Film/Serie[/COLOR]",
     "plugin"            : "plugin.video.wltvhelper",
     "priority"          : 100,
-	"is_resolvable"     : "true",
+    "is_resolvable"     : "true",
     "assert": {
         "play_movie"    : ["title","year"],
         "play_episode"  : ["showname","season","episode"],
@@ -30,7 +30,7 @@
         {"keyboard": "{showname}"},
         {"dialog": "true"}
     ],
-	"fallback": {
+    "fallback": {
         "play_movie": "WLTV_player.json search_movie"
     }
 }
