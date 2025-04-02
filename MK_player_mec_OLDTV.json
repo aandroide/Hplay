@@ -17,17 +17,17 @@
         {"title": "(?i)^.*\\b({showname}|{originaltitle}).*(\\({showyear}\\))?.*(\\(Telefilm\\)|\\(Cartoni\\)).*$"},
         {"title": "(?i)^.*{season}x0?{episode}?.*$"},
         {"title": "(?i)^.*{season}x0?{episode}?.*$"},
-		{"title": "(?i)^.*{season}x0?{episode}?.*$"}
+        {"title": "(?i)^.*{season}x0?{episode}?.*$"}
     ],
     "search_movie": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332B%26search%3D",
         {"keyboard": "{title}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
     "search_episode": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332B%26search%3D",
         {"keyboard": "{showname}"},
-		{"dialog": "true"}
+        {"dialog": "true"}
     ],
         "fallback": {
         "play_movie": "MK_player_mec_OLDTV.json search_movie",
