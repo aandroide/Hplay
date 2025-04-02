@@ -21,7 +21,7 @@
         {"title": "(?i)^.*{season}.*{episode}.*$"},
         {"return": "true", "title": "(?i)^.*PLAY.*$"},
         {"title": "(?i)^.*{season}.*{episode}.*$"},
-        {"title": "(?i).*{showname}.*{season}.*{episode}.*$"}
+        {"title": "(?i)^.*{showname}.*{season}.*{episode}.*$"}
     ],
     "search_movie": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26search%3D",
