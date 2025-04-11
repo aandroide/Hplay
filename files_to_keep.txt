@@ -1,5 +1,0 @@
-./MK_player_mec_OLDTV.json
-./MK_player_me_SL123.json
-./MK_player_m.json
-./MK_player_m_sel.json
-./MK_player_me_SL3.json
