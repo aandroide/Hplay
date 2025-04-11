@@ -1,0 +1,8 @@
+{
+    "name"          : "[COLOR blue]s4me[/COLOR]___[COLOR red]ricerca[/COLOR]",
+    "plugin"        : "plugin.video.s4me",
+    "priority"      : 95,
+    "is_resolvable" : "false",
+    "play_movie"    : "plugin://plugin.video.s4me/?action=Search&channel=globalsearch&mode=movie&type=movie&text={title_url}",
+    "play_episode"  : "plugin://plugin.video.s4me/?action=Search&channel=globalsearch&mode=tvshow&type=tvshow&text={showname_url}"
+}

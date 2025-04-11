@@ -1,0 +1,7 @@
+{
+    "name"          : "[COLOR blue]s4me[/COLOR]___[COLOR red]ricerca_vecchia[/COLOR]",
+    "plugin"        : "plugin.video.s4me",
+    "priority"      : 99,
+    "search_movie"  : "plugin://plugin.video.s4me/?action=new_search&channel=search&mode=movie&search_text={clearname_url}",
+    "search_episode": "plugin://plugin.video.s4me/?action=new_search&channel=search&mode=tvshow&search_text={clearname_url}"
+}
