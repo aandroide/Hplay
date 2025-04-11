@@ -1,2 +1,0 @@
-./WLTV_player_pri4k.json
-./WLTV_player.json
