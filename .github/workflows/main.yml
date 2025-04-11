@@ -51,7 +51,7 @@ jobs:
               KEEP_PATTERN="elementum"
               ;;
             *Scrubsv2*)
-              KEEP_PATTERN="direct"
+              KEEP_PATTERN="Scrubs"
               ;;
           esac
 
