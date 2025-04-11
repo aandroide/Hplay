@@ -1,0 +1,3 @@
+./TG360_player_interno.json
+./TG360_player_globale.json
+./TG360_player_esterno.json
