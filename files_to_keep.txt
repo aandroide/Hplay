@@ -1,0 +1,13 @@
+./S4Me_player_me_sc.json
+./S4Me_player_me_cb01.json
+./S4Me_player_m_h4m.json
+./S4Me_player_e_tf_metafunzioni.json
+./S4Me_player_ea_fpt_metafunzioni.json
+./S4Me_player_m_ds.json
+./S4Me_player_ea_es_actor.json
+./S4Me_player_e_gs.json
+./S4Me_player_m_igds_cam.json
+./S4Me_player_mea_ti.json
+./S4Me_player_m_ad01.json
+./S4Me_player_me_si_nonpermanente.json
+./S4Me_player_e_cc_metafunzioni.json
