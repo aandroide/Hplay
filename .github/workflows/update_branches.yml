@@ -21,14 +21,13 @@ jobs:
           git config --global user.name "GitHub Actions"
           git fetch origin main
           git merge origin/main --no-edit --allow-unrelated-histories || {
-            git checkout --theirs -- S4Me_ricerca.json S4Me_ricerca_0vecchia.json S4Me_ricerca_1337x.json S4Me_ricerca_ilcorsaronero.json
-            git add S4Me_ricerca.json S4Me_ricerca_0vecchia.json S4Me_ricerca_1337x.json S4Me_ricerca_ilcorsaronero.json
-            git commit -m "Resolved merge conflict for S4Me files"
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for S4Me branch" || true
           }
 
       - name: Filter S4Me files
         run: |
-          # Mantieni solo i file specifici e rimuovi gli altri
           find . -type f -name "*.json" | grep -vE "S4Me_player_|S4me_|S4Me_ricerca(_ilcorsaronero|_1337x|_0vecchia|.json)?" | xargs rm -f
           git add -u
           git commit -m "🔄 Auto-update S4Me player files from main" --allow-empty
@@ -48,11 +47,14 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch origin main
-          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge skipped"
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for Mandrakodi branch" || true
+          }
 
       - name: Filter Mandrakodi files
         run: |
-          # Mantieni solo i file specifici per Mandrakodi
           find . -type f -name "*.json" | grep -vE "MK_player_" | xargs rm -f
           git add -u
           git commit -m "🔄 Auto-update Mandrakodi player files from main" --allow-empty
@@ -72,11 +74,14 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch origin main
-          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge skipped"
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for WLTV branch" || true
+          }
 
       - name: Filter WLTV files
         run: |
-          # Mantieni solo i file specifici per WLTV
           find . -type f -name "*.json" | grep -vE "WLTV" | xargs rm -f
           git add -u
           git commit -m "🔄 Auto-update WLTV player files from main" --allow-empty
@@ -96,11 +101,14 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch origin main
-          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge skipped"
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for TheGroove branch" || true
+          }
 
       - name: Filter TheGroove files
         run: |
-          # Mantieni solo i file specifici per TheGroove
           find . -type f -name "*.json" | grep -vE "TG360_player_" | xargs rm -f
           git add -u
           git commit -m "🔄 Auto-update TheGroove player files from main" --allow-empty
@@ -120,11 +128,14 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch origin main
-          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge skipped"
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for Torrent branch" || true
+          }
 
       - name: Filter Torrent files
         run: |
-          # Mantieni solo i file specifici per Torrent
           find . -type f -name "*.json" | grep -vE "elementum" | xargs rm -f
           git add -u
           git commit -m "🔄 Auto-update Torrent player files from main" --allow-empty
@@ -144,11 +155,14 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch origin main
-          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge skipped"
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for ScrubsV2 branch" || true
+          }
 
       - name: Filter ScrubsV2 files
         run: |
-          # Mantieni solo direct.scrubsv2.json
           find . -type f -name "*.json" -not -name "direct.scrubsv2.json" | xargs rm -f
           git add -u
           git commit -m "🔄 Auto-update ScrubsV2 player files from main" --allow-empty
