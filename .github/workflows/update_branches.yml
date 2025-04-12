@@ -20,12 +20,16 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch origin main
-          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge skipped"
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs -- S4Me_ricerca.json S4Me_ricerca_0vecchia.json S4Me_ricerca_1337x.json S4Me_ricerca_ilcorsaronero.json
+            git add S4Me_ricerca.json S4Me_ricerca_0vecchia.json S4Me_ricerca_1337x.json S4Me_ricerca_ilcorsaronero.json
+            git commit -m "Resolved merge conflict for S4Me files"
+          }
 
       - name: Filter S4Me files
         run: |
-          find . -type f -name "*.json" | grep -E "S4Me_player_|S4me_" > files_to_keep.txt
-          find . -type f -name "*.json" | grep -vE "S4Me_player_|S4me_" | xargs rm -f
+          find . -type f -name "*.json" | grep -E "S4Me_player_|S4me_|S4Me_ricerca(_ilcorsaronero|_1337x|_0vecchia|.json)?" > files_to_keep.txt
+          find . -type f -name "*.json" | grep -vE "S4Me_player_|S4me_|S4Me_ricerca(_ilcorsaronero|_1337x|_0vecchia|.json)?" | xargs rm -f
           [ -s files_to_keep.txt ] && cat files_to_keep.txt | xargs -I {} git add {} || echo "No files to keep"
           git commit -m "🔄 Auto-update S4Me player files from main" --allow-empty
           git push origin Player_S4me
