@@ -1,5 +1,5 @@
 {
-    "name"              : "[COLOR blue]s4mee[/COLOR]_[COLOR blue]CasaCinema[/COLOR]",
+    "name"              : "[COLOR blue]s4me[/COLOR]_[COLOR blue]CasaCinema[/COLOR]",
     "plugin"            : "plugin.video.s4me",
     "priority"          : 100,
     "is_resolvable"     : "false",
