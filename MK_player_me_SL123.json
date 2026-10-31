@@ -7,10 +7,9 @@
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26search%3D",
         {"keyboard": "{title}"},
         {"dialog": "true", "strict": "true", "label": "{title}", "title": "(?i)^.*{title}.*$"},
-        {"return": "true", "title": "(?i)^.*PLAY.*$"},
-        {"return": "true", "title": "(?i)^.*{title}.*$"},
-        {"title": "(?i)^.*(mixdrop|supervideo|dropload|streamtape|doodstream).*$"},
-        {"title": "(?i)^.*(LINK|{title}).*$"}
+        {"return": "true", "title": "(?i)^.*({title}|PLAY).*$"},
+        {"title": "(?i)^.*(dropHD|mixdrop|supervideo|dropload|streamtape|doodstream).*$"},
+        {"title": "(?i)^.*(LINK 2|{title}).*$"}
     ],
     "play_episode": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26mode%3D1%26search%3D",
@@ -18,10 +17,10 @@
         {"dialog": "true", "strict": "true", "label": "{showname}", "title": "(?i)^.*{showname}.*$"},
         {"title": "(?i)^(.*STAGIONE {season}.*|.*{showname}.*|.*{season}x{episode}.*)$"},
         {"return": "true", "title": "(?i)^.*PLAY.*$"},
-        {"title": "(?i)^.*{season}.*{episode}.*$"},
+        {"title": "(?i)^.*({season}.*{episode}|episodio {episode}).*$"},
         {"return": "true", "title": "(?i)^.*PLAY.*$"},
         {"title": "(?i)^.*{season}.*{episode}.*$"},
-        {"title": "(?i)^.*{showname}.*{season}.*{episode}.*$"}
+        {"title": "(?i)^.*({showname}.*)?{season}.*{episode}.*$"}
     ],
     "search_movie": [
         "plugin://plugin.video.mandrakodi/?action=getExtData2&url=https%3A%2F%2Ftest34344.herokuapp.com%2Ffilter.php%3FnumTest%3DA1A332A%26search%3D",

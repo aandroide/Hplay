@@ -1,0 +1,85 @@
+name: Clean All Player Branches
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  clean_branches:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branches:
+          - Player_S4me
+          - Player_Mandrakodi
+          - Player_Wltv
+          - Player_Thegroove
+          - Player_Torrent
+          - Player_Scrubsv2
+    steps:
+      - name: Checkout branch (${{ matrix.branches }})
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branches }}
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Sync from main
+        run: |
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || echo "Merge fallito, procedo comunque"
+
+      - name: Clean branch files
+        run: |
+          case "${{ matrix.branches }}" in
+            *S4me*)
+              # Pattern migliorato per S4me
+              find . -type f \( -name "*S4Me_player_*.json" -o -name "*S4me_*.json" -o -name "*S4ME_*.json" \) > files_to_keep.tmp
+              find . -type f -name "*.json" -not \( -name "*S4Me_player_*.json" -o -name "*S4me_*.json" -o -name "*S4ME_*.json" \) | xargs rm -f
+              ;;
+            *Mandrakodi*)
+              find . -type f -name "*MK_player_*.json" > files_to_keep.tmp
+              find . -type f -name "*.json" -not -name "*MK_player_*.json" | xargs rm -f
+              ;;
+            *Wltv*)
+              find . -type f -name "*WLTV*.json" > files_to_keep.tmp
+              find . -type f -name "*.json" -not -name "*WLTV*.json" | xargs rm -f
+              ;;
+            *Thegroove*)
+              find . -type f -name "*TG360_player_*.json" > files_to_keep.tmp
+              find . -type f -name "*.json" -not -name "*TG360_player_*.json" | xargs rm -f
+              ;;
+            *Torrent*)
+              find . -type f -name "*elementum*.json" > files_to_keep.tmp
+              find . -type f -name "*.json" -not -name "*elementum*.json" | xargs rm -f
+              ;;
+            *Scrubsv2*)
+              find . -type f -name "direct.scrubsv2.json" > files_to_keep.tmp
+              find . -type f -name "*.json" -not -name "direct.scrubsv2.json" | xargs rm -f
+              ;;
+          esac
+
+          # Processa i file da mantenere
+          if [ -f files_to_keep.tmp ]; then
+            while IFS= read -r file; do
+              git add "$file"
+            done < files_to_keep.tmp
+            rm -f files_to_keep.tmp
+          fi
+
+          # Mantieni la cartella .github e rimuovi altre cartelle vuote
+          find . -type d -not -name ".github" -not -path "." -empty -delete 2>/dev/null || true
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "🔄 Auto-clean: mantengo solo file del player [$(date +%Y-%m-%d)]" --allow-empty || echo "Nessun cambiamento"
+          git push origin ${{ matrix.branches }} || echo "Push fallito"
