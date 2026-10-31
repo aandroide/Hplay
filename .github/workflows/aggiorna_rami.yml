@@ -1,0 +1,172 @@
+name: Update All Player Branches
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update_s4me_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout S4Me branch
+        uses: actions/checkout@v4
+        with:
+          ref: Player_S4me
+          fetch-depth: 0
+
+      - name: Sync from main
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for S4Me branch" || true
+          }
+
+      - name: Filter S4Me files
+        run: |
+          find . -type f -name "*.json" | grep -vE "S4Me_player_|S4me_|S4Me_ricerca(_ilcorsaronero|_1337x|_0vecchia|.json)?" | xargs rm -f
+          git add -u
+          git commit -m "🔄 Auto-update S4Me player files from main" --allow-empty
+          git push origin Player_S4me
+
+  update_mandrakodi_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Mandrakodi branch
+        uses: actions/checkout@v4
+        with:
+          ref: Player_Mandrakodi
+          fetch-depth: 0
+
+      - name: Sync from main
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for Mandrakodi branch" || true
+          }
+
+      - name: Filter Mandrakodi files
+        run: |
+          find . -type f -name "*.json" | grep -vE "MK_player_" | xargs rm -f
+          git add -u
+          git commit -m "🔄 Auto-update Mandrakodi player files from main" --allow-empty
+          git push origin Player_Mandrakodi
+
+  update_wltv_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout WLTV branch
+        uses: actions/checkout@v4
+        with:
+          ref: Player_Wltv
+          fetch-depth: 0
+
+      - name: Sync from main
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for WLTV branch" || true
+          }
+
+      - name: Filter WLTV files
+        run: |
+          find . -type f -name "*.json" | grep -vE "WLTV" | xargs rm -f
+          git add -u
+          git commit -m "🔄 Auto-update WLTV player files from main" --allow-empty
+          git push origin Player_Wltv
+
+  update_thegroove_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout TheGroove branch
+        uses: actions/checkout@v4
+        with:
+          ref: Player_Thegroove
+          fetch-depth: 0
+
+      - name: Sync from main
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for TheGroove branch" || true
+          }
+
+      - name: Filter TheGroove files
+        run: |
+          find . -type f -name "*.json" | grep -vE "TG360_player_" | xargs rm -f
+          git add -u
+          git commit -m "🔄 Auto-update TheGroove player files from main" --allow-empty
+          git push origin Player_Thegroove
+
+  update_torrent_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Torrent branch
+        uses: actions/checkout@v4
+        with:
+          ref: Player_Torrent
+          fetch-depth: 0
+
+      - name: Sync from main
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for Torrent branch" || true
+          }
+
+      - name: Filter Torrent files
+        run: |
+          find . -type f -name "*.json" | grep -vE "elementum" | xargs rm -f
+          git add -u
+          git commit -m "🔄 Auto-update Torrent player files from main" --allow-empty
+          git push origin Player_Torrent
+
+  update_scrubsv2_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ScrubsV2 branch
+        uses: actions/checkout@v4
+        with:
+          ref: Player_Scrubsv2
+          fetch-depth: 0
+
+      - name: Sync from main
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch origin main
+          git merge origin/main --no-edit --allow-unrelated-histories || {
+            git checkout --theirs . || true
+            git add . || true
+            git commit -m "Resolved merge conflict for ScrubsV2 branch" || true
+          }
+
+      - name: Filter ScrubsV2 files
+        run: |
+          find . -type f -name "*.json" -not -name "direct.scrubsv2.json" | xargs rm -f
+          git add -u
+          git commit -m "🔄 Auto-update ScrubsV2 player files from main" --allow-empty
+          git push origin Player_Scrubsv2
