@@ -1,0 +1,15 @@
+{
+    "name"              : "[COLOR aqua]MK[/COLOR]_[COLOR red]Film IMDb[/COLOR]",
+    "plugin"            : "plugin.video.mandrakodi",
+    "priority"          : 100,
+    "is_resolvable"     : "true",
+    "assert": {
+        "play_movie"    : ["imdb"]
+    },
+    "play_movie": [
+        "plugin://plugin.video.mandrakodi/?action=myresolve&url=imdb&parIn={imdb}",
+        {"title": "(?i)^.*(dropHD|dropload).*$"},
+        {"return": "true", "title": "(?i)^.*LINK [2-9].*$"},
+        {"dialog": "true", "strict": "true", "label": "{title}"}
+    ]
+}
