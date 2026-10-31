@@ -1,5 +1,5 @@
 {
-    "name"              : "[COLOR aqua]MK[/COLOR]_[COLOR red]Film(sel-server)[/COLOR]",
+    "name"              : "[COLOR aqua]MK[/COLOR]_[COLOR red]Film IMDb(sel-server)[/COLOR]",
     "plugin"            : "plugin.video.mandrakodi",
     "priority"          : 100,
     "is_resolvable"     : "true",
@@ -8,8 +8,7 @@
     },
     "play_movie": [
         "plugin://plugin.video.mandrakodi/?action=myresolve&url=imdb&parIn={imdb}",
-        {"dialog": "auto", "strict": "true", "label": "{title}", "title": "(?i)^.*(supervideo|dropload|mixdrop|streamtape|doodstream).*$"},
-        {"return": "true", "title": "(?i)^.*LINK [0-9].*$"},
+        {"dialog": "auto", "strict": "true", "label": "{title}"},
         {"dialog": "true", "strict": "true", "label": "{title}"}
     ]
 }
